@@ -1,0 +1,42 @@
+{% extends '::frontend.html.twig' %}
+{% block title %}Ubicanos {% endblock %}
+{% block maps %}
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAKIwPSFjoceTS2g2r17D-B9lQX_36rA5I"></script>
+<script>
+var myCenter = new google.maps.LatLng(-12.061284, -75.221227);
+function initialize() {
+  var mapProp = {
+    center:myCenter,
+    zoom:17,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+  var marker = new google.maps.Marker({
+  	position:myCenter,
+
+  });
+  marker.setMap(map);
+  
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+{% endblock %}
+
+{% block article %}
+<div class="container">	
+	<div class="row">
+		<div class="col-md-2" ></div>
+		<div class="col-md-8">
+			<div class="headubic">
+				<img src="{{ asset('img/ubicacionrec.jpg') }}" />
+				<h2>Ubicanos</h2>
+			</div>
+			<p>Estamos ubicados en el <strong>Jr. Sebastian Lorente N°1088 distrito de El Tambo</strong>.</p>
+			<div id="googleMap" style="width:700px;height:480px;" class="align-center"></div>
+		</div>
+		<div class="col-md-2" ></div>
+	</div>
+</div>
+{% endblock %}

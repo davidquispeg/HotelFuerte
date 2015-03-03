@@ -1,0 +1,15 @@
+cliente_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ClienteBundle:Default:index }
+cliente_portada:
+    path: /portada
+    defaults: { _controller: ClienteBundle:Default:portada }
+cliente_habiprec:
+    path: /habitacionesyprecios
+    defaults: { _controller: ClienteBundle:Default:habiprec }
+cliente_reservas:
+    path: /reservar
+    defaults: { _controller:ClienteBundle:Default:reservar }
+cliente_ubicacion:
+    path: /ubicanos
+    defaults: { _controller:ClienteBundle:Default:ubicar }

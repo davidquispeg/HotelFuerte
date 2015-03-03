@@ -1,0 +1,42 @@
+{% extends '::frontend.html.twig' %}
+{% block title %} Habitaciones Y Precios {% endblock %}
+{% block article %}
+
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<header>
+			<div class="headhabi">
+				<img src="{{ asset('img/cuartorec.png') }}" alt="imgrecortada" />
+				<h2>Nuestras Habitaciones</h2>
+			</div>
+		</header>
+		<div>
+			<h4><span class="glyphicon glyphicon-chevron-right"> Simple</span></h4>
+		</div>
+		<div>
+			<img class="img-responsive img-thumbnail" src="{{ asset('img/cuarto1.jpg') }}" alt="room1" width="300" />
+			<img class="img-responsive img-thumbnail" src="{{ asset('img/cuarto2.jpg') }}" alt="room2" width="300" />
+			<img class="img-responsive img-thumbnail" src="{{ asset('img/cuarto0.jpeg') }}" alt="room3" width="300" />
+		</div>
+		<div class="row">
+			<div class="col-md-2 well">Precio: S/.20.00</div>
+		</div>		
+
+		<div>
+			<h4><span class="glyphicon glyphicon-chevron-right"> Matrimonial</span></h4>
+		</div>
+		<div>
+			<img class="img-thumbnail" src="{{ asset('img/cuarto3.jpg') }}" alt="room1" width="300" />
+			<img class="img-thumbnail" src="{{ asset('img/cuarto4.jpg') }}" alt="room2" width="300" />
+			<img class="img-thumbnail" src="{{ asset('img/cuarto5.jpg') }}" alt="room3" width="300" />
+		</div>
+		<div class="row">
+			<div class="col-md-2 well">Precio: S/.70.00</div>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
+</div>	
+
+
+{% endblock %}

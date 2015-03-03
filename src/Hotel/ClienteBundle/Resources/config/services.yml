@@ -1,0 +1,7 @@
+parameters:
+#    cliente.example.class: Hotel\ClienteBundle\Example
+
+services:
+#    cliente.example:
+#        class: %cliente.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

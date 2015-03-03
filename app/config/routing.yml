@@ -1,0 +1,4 @@
+cliente:
+    resource: "@ClienteBundle/Resources/config/routing.yml"
+    prefix:   /
+

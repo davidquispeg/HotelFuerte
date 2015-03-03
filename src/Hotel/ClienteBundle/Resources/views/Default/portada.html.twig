@@ -1,0 +1,66 @@
+{% extends '::frontend.html.twig' %}
+{% block title %}Bienvenido{% endblock %}
+
+{% block article %}
+<section>
+    <div class="container">    
+        <div class="row imgprincipal">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">            
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                	<ol class="carousel-indicators">
+                		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                		
+                	</ol>
+                	<div class="carousel-inner">
+                		<div class="item active">
+                			<img src="{{ asset('img/cuarto3.jpg') }}" alt="room1"/>
+                		</div>
+                        <div class="item">
+                            <img src="{{ asset('img/cuarto4.jpg') }}" alt="room2"/>
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('img/cuarto5.jpg') }}" alt="room3"/>
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('img/cuarto6.jpg') }}" alt="room4"/>
+                        </div>
+                	</div>
+                	<a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="icon-prev"></span></a>
+                	<a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="icon-next"></span></a>
+                </div>            
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="{{ path('cliente_habiprec') }}"><img src="{{ asset('img/cuarto.jpg') }}" width="170" height="106" class="img-responsive img-rounded center-block"/></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="{{ path('cliente_reservas') }}"><img src="{{ asset('img/calendario.jpg') }}" width="146" height="106" class="img-responsive img-rounded center-block"/></a>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="cursiva text-center">Mira nuestras habitaciones</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="cursiva text-center">Reserva una habitacion</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</section>
+
+    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/hotelcliente/js/bootstrap.js') }}"></script>    
+{% endblock %}

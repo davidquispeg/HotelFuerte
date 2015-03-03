@@ -1,0 +1,46 @@
+{% extends '::frontend.html.twig' %}
+{% block title %} Reservar Habitacion {% endblock %}
+{% block article %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-2"></div>	
+		<div class="col-md-6">
+			<div class="headreserva">
+				<img src="{{ asset('img/calendariorec.jpg') }}" />
+				<h2>Haz tu Reserva</h2>
+			</div>
+			<div class="jumbotron">
+			<form action="{{ path('cliente_reservas') }}" method="post" {{ form_enctype(formu) }}>
+				{{ form_errors(formu) }}
+				<div class="form-group">
+					{{ form_label(formu.nombre) }}
+					{{ form_errors(formu.nombre) }}
+					{{ form_widget(formu.nombre, {'attr':{'class':'form-control'}}) }}
+				</div>
+				<div class="form-group">
+					{{ form_label(formu.email) }}
+					{{ form_errors(formu.email) }}
+					{{ form_widget(formu.email, {'attr':{'class':'form-control'}}) }}
+				</div>
+				<div class="form-group">
+					{{ form_label(formu.telefono) }}
+					{{ form_errors(formu.telefono) }}
+					{{ form_widget(formu.telefono, {'attr':{'class':'form-control'}}) }}
+				</div>
+				<div class="form-group">
+					{{ form_label(formu.habitacion) }}
+					{{ form_errors(formu.habitacion) }}
+					{{ form_widget(formu.habitacion, {'attr':{'class':'form-control'}}) }}
+				</div>
+				{{ form_rest(formu) }}
+				<div class="form-group">
+					<input type="submit" value="Enviar" class="btn btn-success">
+				</div>
+			</form>
+		</div>
+		</div>		
+		<div class="col-md-4"></div>
+	</div>
+</div>
+
+{% endblock %}

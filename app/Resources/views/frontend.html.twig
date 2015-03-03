@@ -1,0 +1,87 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{{ asset('bundles/hotelcliente/css/normalizar.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('bundles/hotelcliente/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('bundles/hotelcliente/css/main.css') }}" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700' rel='stylesheet' type='text/css'>
+{% endblock %}
+{% block javascripts %}{% endblock %}
+
+{% block body %}
+<div class="container">
+	<div class="row">		
+		<div class="col-md-12">
+			<header class="cabecera">
+				<div>
+					<img src="{{ asset('/img/logo.jpg') }}" alt="Logotipo" />
+					<ul>
+						<li><span class="glyphicon glyphicon-earphone"></span>Telefonos: 243056 - 964346587</li>
+						<li><span class="glyphicon glyphicon-map-marker"></span>Jr.Sebastian Lorente N°1088</li>
+					</ul>
+				</div>
+				<ul class="nav nav-pills nav-justified">
+					<li class="active"><a href="{{ path('cliente_portada') }}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+					<li><a href="{{ path('cliente_habiprec') }}"><span class="glyphicon glyphicon-usd"></span> Habitaciones y Precios</a></li>
+					<li><a href="{{ path('cliente_reservas') }}"><span class="glyphicon glyphicon-calendar"></span> Reservas</a></li>
+					<li><a href="{{ path('cliente_ubicacion') }}"><span class="glyphicon glyphicon-map-marker" ></span> Ubicanos</a></li>
+				</ul>
+			</header>
+		</div>		
+	</div>
+</div>
+
+	<article>
+		{% set flashbag_aviso = app.session.flashbag.get('aviso') %}
+			{% if flashbag_aviso is not empty %}
+				<ul class="alert alert-success">
+					{% for aviso in flashbag_aviso %}
+						<li>{{ aviso }}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		{% block article %}
+			
+		{% endblock %}
+	</article>
+
+	<aside>
+		{% block aside %}
+			<footer class="pie">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+							<div class="col-md-6">
+								<img src="{{ asset('/img/logof.jpg') }}" alt="footerLogo" />
+								<ul>
+									<li>Jr.Sebastian Lorente N°1088 El Tambo</li>
+									<li>Telefono: (064) 241228</li>
+									<li>RPM: *123456</li>
+									<li>E-mail: hotelfuerte@gmail.coms</li>
+								</ul>
+							</div>
+							<div class="col-md-5 col-md-offset-1">
+								<div>
+									<a href="{{ path('cliente_portada') }}">Home</a> /
+									<a href="{{ path('cliente_habiprec') }}"> Habitaciones</a> /
+									<a href="{{ path('cliente_reservas') }}"> Reservas</a> /
+									<a href="{{ path('cliente_ubicacion') }}"> Ubicacion</a>
+								</div>
+								<div class="copyrigth">
+									<p> © Realizado por David Quispe G. </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+				</div>
+			</footer>
+		{% endblock %}
+	</aside>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="bundles/hotelcliente/js/bootstrap.js"></script>
+{% endblock %}
+
