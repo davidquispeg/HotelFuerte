@@ -1,0 +1,97 @@
+.img-thumbnail:hover{
+	-webkit-transform: scale(1.3);
+	   -moz-transform: scale(1.3);
+	    -ms-transform: scale(1.3);
+	     -o-transform: scale(1.3);
+	        transform: scale(1.3);
+}
+body {
+	font-family: 'Source Sans Pro',sans-serif;
+}
+div span{
+	font-family: 'MelbourneBold', Arial, sans-serif;
+	padding-right: 4px;
+}
+.cursiva{
+	font-family: 'Lobster', cursive;
+	padding-left: 15px;
+	padding-bottom: 20px;
+}
+.imgprincipal{
+	background-color: #f4ecca;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+/*Cabecera*/
+.cabecera {
+	background-color: #FFFFFF;
+}
+.cabecera div ul {
+	list-style: none;
+	float: right;
+	margin-top: 45px;
+	margin-right: 200px;
+	color:;
+}
+.cabecera div img {
+	height: 120px;
+	padding-left: 200px;
+}
+/* Modificacion del nav */
+.cabecera .nav{
+	background-color: #181818;
+	width: 100%;
+}
+
+.cabecera .nav-pills>li.active>a {
+	background: none;
+}
+.cabecera .nav-pills>li.active>a:hover,
+.cabecera .nav-pills>li.active>a:focus,
+.cabecera .nav-pills>li>a:hover,
+.cabecera .nav-pills>li>a:focus{
+	background: #000000;
+}
+.cabecera .nav-pills>li.active>a,
+.cabecera .nav-pills>li.active>a:hover,
+.cabecera .nav-pills>li.active>a:focus,
+.cabecera .nav-pills>li>a {
+	color: #FFFFFF;
+}
+/* footer */
+.pie {
+	padding-top: 20px;
+	background-color: #e4e4e4;
+	color: #646464;
+}
+.pie ul {
+	list-style: none;
+	float: right;
+}
+.pie img {	
+	height: 90px;
+}
+
+.pie .copyrigth{
+	text-align: center;
+	padding-top: 20px;
+}
+/* Habitaciones y precios */
+.well {
+	padding: 8px;
+	margin-top: 6px;
+}
+.headhabi,.headreserva, .headubic {	 
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.headhabi img, .headreserva img, .headubic img {
+	-webkit-box-shadow: 2px 2px 5px #999;
+	-moz-box-shadow:2px 2px 5px #999;
+	-o-box-shadow:2px 2px 5px #999;
+	-ms-box-shadow:2px 2px 5px #999;
+	box-shadow: 4px 4px 5px #999;
+}
+/* Reserva */
